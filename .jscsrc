@@ -1,0 +1,107 @@
+/******************************************************************************
+ *
+ * A Meteor Developer's ECMA 6th Edition JSCS Configuration
+ * by @iDoMeteor
+ *
+ * http://github.com/idometeor/meteor-style-skeleton/.jsrc
+ *
+ * Based on the official Node style guide and enhanced to reflect the
+ * golden grail of Meteor Style Guide (MSG) compliance.  Then relaxed to make
+ * it practical and attainable for real-world projects. Then tightened up to
+ * meet my personal expectations. :D
+ *
+ * My additions have notes, my changes are props set to false.
+ *
+ * Do not run this with autofix on your code if you do not understand precisely
+ * what it is going to do... or you're working on a copy. :>
+ *
+ *
+ * ***************************************************************************/
+{
+    "disallowEmptyBlocks": true,    // Meteor can go goofy if you have empties
+    "disallowKeywords": ["with"],
+    "disallowKeywordsOnNewLine": ["else"],
+    "disallowMixedSpacesAndTabs": true,
+    "disallowMultipleLineStrings": true,
+    "disallowMultipleVarDecl": "exceptUndefined",
+    "disallowNewlineBeforeBlockStatements": true,
+    "disallowOperatorBeforeLineBreaK": true,    // It's better this way
+    "disallowQuotedKeysInObjects": false,       // It's not a perfect world
+                                                // For example, meteor-developer,
+                                                // http-equiv, etc.
+    "disallowSpaceAfterObjectKeys": true,
+    "disallowSpaceAfterPrefixUnaryOperators": false, // MSG
+    "disallowSpacesInFunction": {
+        "beforeOpeningRoundBrace": true
+    },
+    "disallowSpacesInsideParentheses": false,   // MSG
+    "disallowTrailingWhitespace": true,
+    "maximumLineLength": 80,                    // Need to allow URLs, regex, etc
+    "requireBlocksOnNewline": true,             // Only logical
+    "requireCamelCaseOrUpperCaseIdentifiers": true,
+    "requireCapitalizedComments": false,        // 4am comments are awesome
+    "requireCapitalizedConstructors": true,
+    "requireCommaBeforeLineBreak: true,         // Please & thank you
+    "requireCurlyBraces": false,                // ESLint handles this much better
+                                                // and in MSG friendly way
+    "requireLineBreakAfterVariableAssignment: true,   // MSG & iDM style
+    "requireMultipleVarDecl": true,             // MSG & iDM style
+    "requireParenthesesAroundIIFE": true,       // iDM style, MSG no mention
+    "requireSemicolons": true,                  // iDM & MSG
+    "requireSpaceAfterBinaryOperators": true,   // MSG & iDM
+    "requireSpaceAfterKeywords": [
+        "if",
+        "else",
+        "for",
+        "while",
+        "do",
+        "switch",
+        "case",
+        "return",
+        "try",
+        "catch",
+        "typeof"
+    ],
+    "requireSpaceAfterLineComment": true,
+    "requireSpaceAfterBinaryOperators": true,
+    "requireSpaceBeforeBinaryOperators": true,
+    "requireSpaceBeforeBlockStatements": true,
+    "requireSpaceBeforeKeywords": [
+        "if",
+        "else",
+        "for",
+        "while",
+        "do",
+        "switch",
+        "case",
+        "return",
+        "try",
+        "catch",
+        "typeof"
+    ],
+    "requireSpaceBeforeObjectValues": true,
+    "requireSpaceBetweenArguments": true,       // MSG &iDM
+    "requireSpacesInAnonymousFunctionExpression": true, // MSG & iDM
+    "requireSpacesInConditionalExpression": true,       // iDM & (I think) MSG
+    "requireSpaceInForStatement": true,         // MSG
+
+    "requireSpacesInFunction": {
+        "beforeOpeningCurlyBrace": true,
+        "beforeOpeningRoundBrace": true,        // MSG & iDM
+    },
+    "requireSpaceInsideObjectBrackets": true,   // MSG
+    "requireTrailingComma": {                   // iDM style, MSG does not do
+        "ignoreSingleLine": true,
+        "ignoreSingleValue": true
+    },
+    "requireYodaConditions": true,              // iDM specific, guru i am
+    "safeContextKeyword": true,                 // MSG & iDM
+    "validateIndentation": 2,
+    "validateLineBreaks": "LF",
+    "validateNewlineAfterArrayElements": true,  // iDM style, MSG no mention
+    "validateParameterSeparator": ", ",         // MSG & iDM
+    "validateQuoteMarks": {                     // iDM
+        "mark": "'",
+        "escape": true
+    },
+}

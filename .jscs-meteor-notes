@@ -1,0 +1,528 @@
+# TL;DR
+
+Running JSCS auto-configure against Meteor/examples & Meteor/packages/(very
+important core ones), combining them and cross-referencing them with the
+Node style guide leaves only one rule enabled, unix line breaks. :D
+
+# Synopsis
+
+Linting is great, you should do it.  Striving for perfection is a
+valient goal.  It's more important that your program works, and unit testing
+is probably more important than linting glory.
+
+# Conclusion
+
+Linting from the beginning of a project's life is the way to go,
+playing catch up in hind site may be a bit painful, but for the current stage
+my projects are in, I intend to bring them into compliance with my rules, which
+are mostly in line with MDG Style Guide, allowing for some creative freedoms
+and human imperfections, such as they themselves do. :)
+
+# What is the rest of this stuff?
+
+The following is the results of my JSCS study and sloc'ing.  It has the JSCS
+node-style-guide preset and studies of Meteor source code fresh from Github
+and my own Meteor source code.
+
+For Meteor examples and critical core packages, my two content management
+systems in development and my Twitter bot you will find Node SLOC counts,
+the JSCS auto-config reports and the resulting .jscs files.
+
+As for the SLOCs on #MeteorPress, #OnePageWonder & #TwiefBot.. that represents
+my 2015 as of 20150720.  What did you do? :)
+
+# JSCS Generated Configs & SLOCs
+
+## NODE STYLE GUIDE
+{
+    "disallowKeywords": ["with"],
+    "disallowKeywordsOnNewLine": ["else"],
+    "disallowMixedSpacesAndTabs": true,
+    "disallowMultipleVarDecl": "exceptUndefined",
+    "disallowNewlineBeforeBlockStatements": true,
+    "disallowQuotedKeysInObjects": true,
+    "disallowSpaceAfterObjectKeys": true,
+    "disallowSpaceAfterPrefixUnaryOperators": true,
+    "disallowSpacesInFunction": {
+        "beforeOpeningRoundBrace": true
+    },
+    "disallowSpacesInsideParentheses": true,
+    "disallowTrailingWhitespace": true,
+    "maximumLineLength": 80,
+    "requireCamelCaseOrUpperCaseIdentifiers": true,
+    "requireCapitalizedComments": true,
+    "requireCapitalizedConstructors": true,
+    "requireCurlyBraces": true,
+    "requireSpaceAfterKeywords": [
+        "if",
+        "else",
+        "for",
+        "while",
+        "do",
+        "switch",
+        "case",
+        "return",
+        "try",
+        "catch",
+        "typeof"
+    ],
+    "requireSpaceAfterLineComment": true,
+    "requireSpaceAfterBinaryOperators": true,
+    "requireSpaceBeforeBinaryOperators": true,
+    "requireSpaceBeforeBlockStatements": true,
+    "requireSpaceBeforeObjectValues": true,
+    "requireSpacesInFunction": {
+        "beforeOpeningCurlyBrace": true
+    },
+    "requireTrailingComma": {
+        "ignoreSingleLine": true
+    },
+    "validateIndentation": 2,
+    "validateLineBreaks": "LF",
+    "validateQuoteMarks": "'"
+}
+
+## METEOR EXAMPLES
+{
+        "preset": "node-style-guide",
+        "disallowKeywordsOnNewLine": null,
+        "disallowMixedSpacesAndTabs": null,
+        "disallowMultipleVarDecl": null,
+        "disallowNewlineBeforeBlockStatements": null,
+        "disallowQuotedKeysInObjects": null,
+        "disallowSpaceAfterObjectKeys": null,
+        "disallowSpaceAfterPrefixUnaryOperators": null,
+        "disallowSpacesInFunction": null,
+        "disallowSpacesInsideParentheses": null,
+        "disallowTrailingWhitespace": null,
+        "maximumLineLength": null,
+        "requireCamelCaseOrUpperCaseIdentifiers": null,
+        "requireCapitalizedComments": null,
+        "requireCapitalizedConstructors": null,
+        "requireCurlyBraces": null,
+        "requireSpaceAfterBinaryOperators": null,
+        "requireSpaceAfterKeywords": null,
+        "requireSpaceAfterLineComment": null,
+        "requireSpaceBeforeBinaryOperators": null,
+        "requireSpaceBeforeBlockStatements": null,
+        "requireSpaceBeforeObjectValues": null
+        "requireSpacesInFunction": null,
+        "requireTrailingComma": null,
+        "validateIndentation": null,
+        "validateQuoteMarks": null,
+}
+
+## METEOR PACKAGES
+{
+        "preset": "node-style-guide",
+        "disallowKeywordsOnNewLine": null,
+        "disallowMultipleVarDecl": null
+        "disallowQuotedKeysInObjects": null,
+        "disallowSpaceAfterObjectKeys": null,
+        "disallowSpaceAfterPrefixUnaryOperators": null,
+        "disallowSpacesInFunction": null,
+        "disallowTrailingWhitespace": null,
+        "maximumLineLength": null,
+        "requireCamelCaseOrUpperCaseIdentifiers": null,
+        "requireCapitalizedComments": null,
+        "requireCapitalizedConstructors": null,
+        "requireCurlyBraces": null,
+        "requireSpaceAfterBinaryOperators": null,
+        "requireSpaceAfterKeywords": null,
+        "requireSpaceAfterLineComment": null,
+        "requireSpaceBeforeBinaryOperators": null,
+        "requireSpaceBeforeBlockStatements": null,
+        "requireSpaceBeforeObjectValues": null,
+        "requireSpacesInFunction": null,
+        "requireTrailingComma": null,
+        "validateIndentation": null,
+        "validateQuoteMarks": null,
+}
+Leaves 4/26 Node style rules enabled
+
+meteor/packages/tmp$ sloc .
+
+---------- Result ------------
+
+            Physical :  18540
+              Source :  12208
+             Comment :  4165
+ Single-line comment :  3393
+       Block comment :  772
+               Mixed :  171
+               Empty :  2342
+
+Number of files read :  136
+
+------------------------------
+
+## METEORPRESS
+{
+        "preset": "node-style-guide",
+        "disallowQuotedKeysInObjects": null,
+        "disallowSpaceAfterObjectKeys": null,
+        "disallowSpacesInFunction": null,
+        "disallowTrailingWhitespace": null,
+        "maximumLineLength": null,
+        "requireCamelCaseOrUpperCaseIdentifiers": null,
+        "requireCapitalizedComments": null,
+        "requireCurlyBraces": null,
+        "requireSpaceAfterBinaryOperators": null,
+        "requireSpaceAfterKeywords": null,
+        "requireSpaceAfterLineComment": null,
+        "requireSpaceBeforeBinaryOperators": null,
+        "requireSpaceBeforeBlockStatements": null
+        "requireSpaceBeforeObjectValues": null,
+        "requireSpacesInFunction": null,
+        "requireTrailingComma": null,
+        "validateIndentation": null,
+        "validateQuoteMarks": null,
+}
+meteorpress/src/v1.0.0-beta.3/tmp$ sloc ./
+
+---------- Result ------------
+
+            Physical :  14873
+              Source :  10433
+             Comment :  2340
+ Single-line comment :  817
+       Block comment :  1523
+               Mixed :  36
+               Empty :  2154
+
+Number of files read :  50
+
+------------------------------
+
+
+## OPW
+{
+        "preset": "node-style-guide",
+        "disallowMultipleVarDecl": null,
+        "disallowQuotedKeysInObjects": null,
+        "disallowSpaceAfterPrefixUnaryOperators": null
+        "disallowSpacesInFunction": null,
+        "disallowTrailingWhitespace": null,
+        "maximumLineLength": null,
+        "requireCamelCaseOrUpperCaseIdentifiers": null,
+        "requireCapitalizedComments": null,
+        "requireCapitalizedConstructors": null,
+        "requireCurlyBraces": null,
+        "requireSpaceAfterBinaryOperators": null,
+        "requireSpaceAfterKeywords": null,
+        "requireSpaceBeforeBinaryOperators": null,
+        "requireSpaceBeforeBlockStatements": null,
+        "requireSpaceBeforeObjectValues": null,
+        "requireSpacesInFunction": null,
+        "requireTrailingComma": null,
+        "validateIndentation": null,
+        "validateQuoteMarks": null,
+}
+onepagewonder/src/v1.0.0-RC.2/tmp$ sloc .
+
+---------- Result ------------
+
+            Physical :  8526
+              Source :  5016
+             Comment :  2222
+ Single-line comment :  557
+       Block comment :  1665
+               Mixed :  75
+               Empty :  1378
+
+Number of files read :  27
+
+------------------------------
+
+
+
+## TWIEFBOT
+{
+        "preset": "node-style-guide",
+        "disallowSpacesInFunction": null,
+        "disallowTrailingWhitespace": null,
+        "maximumLineLength": null,
+        "requireCamelCaseOrUpperCaseIdentifiers": null,
+        "requireCapitalizedComments": null
+        "requireSpaceAfterBinaryOperators": null,
+        "requireTrailingComma": null,
+        "validateIndentation": null,
+}
+j@flipper:~/meteor/twiefbot/src/v1.0.0-RC.1/tmp$ sloc .
+
+---------- Result ------------
+
+            Physical :  7837
+              Source :  4649
+             Comment :  2197
+ Single-line comment :  664
+       Block comment :  1533
+               Mixed :  63
+               Empty :  1054
+
+Number of files read :  7
+
+------------------------------
+
+
+# JSCS Auto-Config Logs
+
+## METEOR PACKAGES
+
+meteor/packages$ jscs --auto-configure ./accounts-base ./accounts-meteor-developer ./accounts-password ./accounts-ui ./accounts-ui-unstyled appcache autopublish audit-argument-checks blaze/ browser-policy browser-policy-common browser-policy-content browser-policy-framing callback-hook check service-configuration/ spacebars spiderable templating/ meteor meteor-developer meteor-platform meteor-tool service-configuration/
+Checking /home/j/meteor/src/meteor/packages/accounts-base against the presets
+   Preset           #Errors #Rules
+
+7  node-style-guide 5028    22
+
+Please choose a preset number: 7
+You chose the node-style-guide preset
+. violates 22 rules
+disallowSpacesInFunction (1371 violations in 108 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+validateQuoteMarks (1347 violations in 108 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireCapitalizedComments (490 violations in 71 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireCurlyBraces (474 violations in 57 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireTrailingComma (442 violations in 84 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+maximumLineLength (334 violations in 54 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+disallowSpaceAfterPrefixUnaryOperators (157 violations in 37 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireSpaceAfterLineComment (132 violations in 8 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireCamelCaseOrUpperCaseIdentifiers (125 violations in 26 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireSpaceAfterBinaryOperators (36 violations in 16 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+validateIndentation (31 violations in 11 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireSpaceBeforeBinaryOperators (28 violations in 10 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+disallowQuotedKeysInObjects (26 violations in 6 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+disallowKeywordsOnNewLine (8 violations in 5 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireSpaceBeforeObjectValues (6 violations in 2 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+disallowTrailingWhitespace (5 violations in 3 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireSpaceAfterKeywords (5 violations in 4 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+disallowSpaceAfterObjectKeys (4 violations in 2 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireSpaceBeforeBlockStatements (2 violations in 2 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireCapitalizedConstructors (2 violations in 2 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireSpacesInFunction (2 violations in 2 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+disallowMultipleVarDecl (1 violation in 1 file):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+Generated a .jscsrc configuration file in /home/j/meteor/src/meteor/packages/tmp
+
+
+
+
+## METEOR EXAMPLES
+
+meteor/examples$ jscs --auto-configure ./
+Checking /home/j/meteor/src/meteor/examples against the presets
+   Preset           #Errors #Rules
+
+7  node-style-guide 13867   25
+
+Please choose a preset number: 7
+You chose the node-style-guide preset
+/home/j/meteor/src/meteor/examples violates 25 rules
+validateIndentation (3471 violations in 7 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+validateQuoteMarks (2905 violations in 36 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireCamelCaseOrUpperCaseIdentifiers (1577 violations in 18 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+disallowSpacesInsideParentheses (1460 violations in 3 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+maximumLineLength (810 violations in 23 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireCurlyBraces (633 violations in 37 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireTrailingComma (519 violations in 59 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+disallowSpacesInFunction (445 violations in 44 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+disallowMultipleVarDecl (392 violations in 6 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+disallowQuotedKeysInObjects (325 violations in 16 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireCapitalizedComments (283 violations in 36 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireSpaceAfterBinaryOperators (224 violations in 14 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireSpaceAfterKeywords (216 violations in 5 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireSpaceAfterLineComment (169 violations in 14 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+disallowMixedSpacesAndTabs (116 violations in 2 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+disallowTrailingWhitespace (92 violations in 18 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireSpaceBeforeBinaryOperators (88 violations in 12 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+disallowSpaceAfterPrefixUnaryOperators (59 violations in 18 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireCapitalizedConstructors (28 violations in 3 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireSpaceBeforeBlockStatements (25 violations in 4 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+disallowNewlineBeforeBlockStatements (8 violations in 3 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+disallowKeywordsOnNewLine (8 violations in 4 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+disallowSpaceAfterObjectKeys (7 violations in 3 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireSpacesInFunction (5 violations in 4 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireSpaceBeforeObjectValues (2 violations in 1 file):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+Generated a .jscsrc configuration file in /home/j/meteor/src/meteor/examples
+
+
+
+
+## #OnePageWonder
+
+j@flipper:~/meteor/onepagewonder/src/v1.0.0-RC.2/tmp$ jscs --auto-configure ./
+Checking /home/j/meteor/onepagewonder/src/v1.0.0-RC.2/tmp against the presets
+   Preset           #Errors #Rules
+
+7  node-style-guide 8320    19
+
+Please choose a preset number: 7
+You chose the node-style-guide preset
+/home/j/meteor/onepagewonder/src/v1.0.0-RC.2/tmp violates 19 rules
+validateIndentation (2627 violations in 17 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireSpaceAfterBinaryOperators (2353 violations in 5 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireSpaceBeforeBinaryOperators (1400 violations in 4 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+validateQuoteMarks (572 violations in 2 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+disallowSpacesInFunction (283 violations in 14 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireSpaceBeforeBlockStatements (248 violations in 1 file):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireSpaceAfterKeywords (235 violations in 5 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireSpacesInFunction (156 violations in 1 file):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireCurlyBraces (117 violations in 6 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+maximumLineLength (108 violations in 12 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+disallowTrailingWhitespace (83 violations in 11 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+disallowMultipleVarDecl (64 violations in 1 file):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireSpaceBeforeObjectValues (19 violations in 1 file):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireTrailingComma (16 violations in 5 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireCapitalizedConstructors (15 violations in 1 file):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireCapitalizedComments (11 violations in 5 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+disallowQuotedKeysInObjects (10 violations in 4 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireCamelCaseOrUpperCaseIdentifiers (2 violations in 2 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+disallowSpaceAfterPrefixUnaryOperators (1 violation in 1 file):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+Generated a .jscsrc configuration file in /home/j/meteor/onepagewonder/src/v1.0.0-RC.2/tmp
+
+
+
+## #MeteorPress
+
+j@flipper:~/meteor/meteorpress/src/v1.0.0-beta.3/tmp$ jscs --auto-configure ./
+Checking /home/j/meteor/meteorpress/src/v1.0.0-beta.3/tmp against the presets
+   Preset           #Errors #Rules
+
+7  node-style-guide 6869    18
+
+Please choose a preset number: 7
+You chose the node-style-guide preset
+/home/j/meteor/meteorpress/src/v1.0.0-beta.3/tmp violates 18 rules
+validateIndentation (5489 violations in 20 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+disallowSpacesInFunction (435 violations in 15 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+disallowTrailingWhitespace (271 violations in 18 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+maximumLineLength (228 violations in 16 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+disallowQuotedKeysInObjects (130 violations in 6 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireTrailingComma (66 violations in 11 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireCurlyBraces (65 violations in 6 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+validateQuoteMarks (49 violations in 7 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+disallowSpaceAfterObjectKeys (41 violations in 2 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireCapitalizedComments (34 violations in 9 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireSpaceAfterKeywords (24 violations in 4 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireSpaceAfterBinaryOperators (13 violations in 4 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireSpaceBeforeObjectValues (7 violations in 2 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireCamelCaseOrUpperCaseIdentifiers (6 violations in 2 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireSpaceBeforeBinaryOperators (5 violations in 2 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireSpaceAfterLineComment (2 violations in 2 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireSpacesInFunction (2 violations in 1 file):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireSpaceBeforeBlockStatements (2 violations in 1 file):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+Generated a .jscsrc configuration file in /home/j/meteor/meteorpress/src/v1.0.0-beta.3/tmp
+
+
+
+
+## #TweifBot
+
+twiefbot/src/v1.0.0-RC.1$ jscs --auto-configure lib/ server/
+Checking lib/ against the presets
+   Preset           #Errors #Rules
+
+7  node-style-guide 428     8
+
+Please choose a preset number: 7
+You chose the node-style-guide preset
+lib/ violates 8 rules
+validateIndentation (297 violations in 4 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+maximumLineLength (34 violations in 2 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireTrailingComma (28 violations in 2 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+disallowSpacesInFunction (21 violations in 2 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+disallowTrailingWhitespace (19 violations in 4 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireCamelCaseOrUpperCaseIdentifiers (19 violations in 2 files):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireSpaceAfterBinaryOperators (9 violations in 1 file):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+requireCapitalizedComments (1 violation in 1 file):
+    Create an (e)xception for this rule, or (f)ix the errors yourself? e
+Generated a .jscsrc configuration file in /home/j/meteor/twiefbot/src/v1.0.0-RC.1

@@ -1,0 +1,16 @@
+accounts-password
+accounts-ui
+audit-argument-checks
+browser-policy
+email
+fortawesome:fontawesome
+iron:router
+meteor-platform
+meteorhacks:fast-render
+meteorhacks:inject-initial
+meteorhacks:kadira
+meteorhacks:kadira-debug
+meteorhacks:kadira-profiler
+meteorhacks:sikka
+mizzao:jquery-ui
+themeteorchef:jquery-validation

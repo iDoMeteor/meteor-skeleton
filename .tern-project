@@ -1,0 +1,20 @@
+/*******************************************************************************
+ * A Meteor Developer's ECMA 6th Edition Tern Project Configuration
+ * by Slava Kim with upcoming mods by @iDoMeteor
+ *
+ * http://github.com/idometeor/meteor-style-skeleton/.tern-project
+ *
+ * ****************************************************************************/
+
+{
+  "libs": [
+    "browser",
+    "jquery",
+    "underscore"
+  ],
+  "loadEagerly": [ "*.js", "*/*.js", "*/*/*.js", "*/*/*/*.js" ],
+  "dontLoad": [ ".meteor" ],
+  "plugins": {
+    "meteor": {}
+  }
+}
