@@ -34,6 +34,9 @@
  * Strict Equality Comparison Algorithm.  Actually, it comes first not only
  * in this paragraph, but also in the ECMA specification (11.9.3 vs 11.9.6).
  *
+ * I once calculated, years ago, that I had saved my poor fingers at least
+ * 3,000,000 keystrokes (lifetime) by using u instead of you in IRC chat.
+ *
  * The standard convention comes from the same old-school origin as using !!.
  * Namely, poor programming practices and ECMA implementations from the past.
  * There are distinct advantages to using == in non-precision (read

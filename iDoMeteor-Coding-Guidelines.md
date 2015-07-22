@@ -1,4 +1,5 @@
 # Synopsis
+## I'm not perfect, but I try.
 
     Firstly.  #MeteorPress and #OnePageWonder are here to stay, my friends.  I
     worked on my own, closed source PHP content management systems exclusively
