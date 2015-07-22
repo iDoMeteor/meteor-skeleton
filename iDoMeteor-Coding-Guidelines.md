@@ -1,479 +1,500 @@
 # Synopsis
 ## I'm not perfect, but I try.
 
-    Firstly.  #MeteorPress and #OnePageWonder are here to stay, my friends.  I
-    worked on my own, closed source PHP content management systems exclusively
-    for over a decade.  I will pursue of both my new babies with the same fervor
-    and committment, but free to the world, forever.
+Firstly.  #MeteorPress and #OnePageWonder are here to stay, and they wish
+to be your friend and help you make money, faster.  I worked on my own,
+closed source PHP content management systems exclusively for over a decade.
+I will pursue of both my new babies with the same fervor and commitment,
+but free to the world, forever.
 
-    Herein lies my personal coding style guide for writing ECMA-262 (Meteor).
-    It is liberal in places, as it specifically relates to web content as
-    opposed to say, a financial or DNA analysis program.  A subtle but distinct
-    (to me) contextual difference with regards to typing & precision.
+These guidelines are intended for those interested in contributing to them
+or for those interested in learning how others do things and maybe learning
+a little something along the way.
 
-    I also like pretty.
+I printed out the 6th edition ECMA spec, but I have not yet had time to read
+it.  #OnePageWonder must be 1.0.0'd first! :>
 
-    Some things may seem standard, some familar, some odd.  Like writing
-    expressions in reverse to prevent accidental assignments instead of
-    comparisons.  Or using the faster to fail == and not wasting CPU cycles
-    flipping bits with !!.
+# Intro
 
-    I understand the ECMA language well (I read 2nd edition specification from
-    beginning to end in 2004) and how CPUs think very well.  It has also been
-    developed over a long (long) period of time coding mostly by myself.  I can
-    adapt to any style, but the code in these repos are *my* babies.
+Herein lies my personal coding style guide for writing ECMA-262, specifically
+for Meteor.  It is liberal in places, as it specifically relates to web
+content as opposed to say, a financial or DNA analysis program.  A subtle but
+distinct (to me) contextual difference with regards to typing & precision.
 
-    So, please, if you wish to judge .. judge away.  But do not be pedantic
-    over trivial semantics in my syntax just if you've read 1,001 tutorials
-    but never actually spent hundreds of hours writing original code without
-    reading my guidelines.  I have a certified IQ of over 130, so it can't be
-    all bad, can it? :>
+I like pretty. And fast, both for me and the CPU.
 
-    If you wish to contribute code to my repositories, then please at least try
-    to come close to my style.. I'll do the rest if I have to.  I'm working on
-    a custom @iDoMeteor JSCS, so soon it will be of no import.
+Some things may seem standard, some familiar, some odd.  Like writing
+expressions in reverse (Yoda) to prevent accidental assignments instead of
+comparisons.  Or using the faster to fail == and not wasting CPU cycles
+flipping bits with !!.
 
-    If you just intend to write section plug-ins, elements & themes.. then by
-    all means, write in whichever manner brings you the most joy!
+I understand the ECMA language well (I read 2nd edition specification from
+beginning to end in 2004) and how CPUs think very well.  It has also been
+developed over a long (long) period of time coding mostly by myself.  I can
+adapt to any style, but the code in these repos are *my* babies.
+
+So, please, if you wish to judge .. judge away.  But do not be pedantic
+over trivial semantics in my syntax just because you've read 1,001 tutorials
+but never actually spent hundreds of hours writing original code.  However,
+if you have, please enlighten me - I'll appreciate it, I promise!
+
+If you wish to contribute code to my repositories, then please at least try
+to come close to my style.. JSCS & I will do the rest if we have to.
+
+If you just intend to write personal plug-ins, elements & themes.. then by
+all means, write in whichever manner brings you the most joy!
 
 
 #The Official @iDoMeteor Coding Guidelines:
 
-    ## Package VS Source VS Tarball
+## Package VS Source VS Tarball
 
-        I have not 100% decided to make the CMSs packages.  This would remove
-        a lot of the flexibility that I am trying to offer.  However, I intend
-        to at least try it out and see how it goes.
+I am just getting into package creation, my analytics and DDP logging code
+will be up on Atmosphere soon, but it may take a while until I can put OPW
+& MP up.  They are large, complex and it would require a lot of testing that
+I do not currently have time for.
 
-        Tarballs are the best if you are looking for 'stable'.
+*But* if you want to help, I will work with you!
 
 
-    ## Considerations
+## Considerations
 
-        #OnePageWonder is the most stylistically current and expresses a pretty
-        thorough presentation of my style.  I am still striving to achieve
-        "true Meteorness," but... they are not 1.0.0 yet! :D
+\#OnePageWonder is the most stylistically current and expresses a pretty
+thorough presentation of my style.  I am still striving to achieve
+"true Meteoriness," but... they are not 1.0.0 yet (and neither am I?)! :D
 
-        As such, they are fairly noisy, in opposition to what a 'production' CMS
-        should be.  There are several settings to control this, however, the
-        separation of client only messages is still in progress.
+As such, they are fairly noisy, in opposition to what a 'production' CMS
+should be.  There are several settings to control this, however, the
+separation of client only messages is still in progress.
 
-        I intend to run two concurrent versions of both #MeteorPress and
-        #OnePageWonder.  Each will be offered as a proper package, but
-        each will also offer a curl installer that pulls one of several
-        varieties (Github clone, tarball-vanilla, and tarball-example-*).
+I intend to run two concurrent versions of both #MeteorPress and
+\#OnePageWonder.  Each will be offered as a proper package, but
+each will also offer a curl installer that pulls one of several
+varieties (Github clone, tarball-vanilla, and tarball-example-\*).
 
-        It is my intention to provide people just coming to Meteor a stable, fun
-        and profitable platform from which they can "ease in" to Meteor.  Not
-        that I have done the research (I'm not a forum/blog cruiser really),
-        but I imagine that many people build a really cool, simple app.
+It is my intention to provide people just coming to Meteor a stable, fun
+and profitable platform from which they can "ease in" to Meteor.  Not
+that I have done the research (I'm not a forum/blog cruiser really),
+but I imagine that many people build a really cool, simple app only to
+have it fall apart on them just before or right after finishing because
+they have 87 packages installed.
 
-        It's built on a **** ton of packages in varying states of maintenance.
-        Things start breaking, their hopes are dashed and pockets gettings slim.
-        What is left but disinterest?
+It's built on a ish ton of packages in varying states of maintenance.
+Things start breaking, their hopes are dashed and pockets getting slim.
+What is left but to move on?
 
-        By running the tarball/Github versions, they can actually have a stable
-        platform that hopefully will allow them to keep their interest and
-        be able to really commit to the platform.
+By using one of my content / application management systems, they can
+actually have a stable platform that hopefully will allow them to keep
+their interest and be able to really commit to the platform.
 
-        It may be an optimistic goal for an independent code artist with no reason
-        to set such a lofty agenda.... but I adopted PHP early because I believed
-        in it.  I did amazing things with it for 12 years.
+It may be an optimistic goal for an independent code artist with no reason
+to set such a lofty agenda.... but I adopted PHP early because I believed
+in it.  I did amazing things with it for 12 years.
 
-        The next decade belongs to Meteor.
+The next decade belongs to Meteor.
 
-        My biggest regret, perhaps my only regret, is that I did not contribute to
-        PHP itself or release any of my content management systems.  I learn from
-        my mistakes, and now you can, too!
+My biggest regret, perhaps my only regret, is that I did not contribute to
+PHP itself or release any of my content management systems.  I learn from
+my mistakes, and now you can, too!
 
-        Lastly, much like Material Design (and Meteor), I am opinionated and for
-        good reasons.  However, much like ECMA Script (and Meteor), I am also
-        open minded and  flexible. :)
+Lastly, much like Material Design (and Meteor), I am opinionated and for
+good reasons.  However, much like ECMA Script (and Meteor), I am also
+open minded and  flexible. :)
 
 
-    ## Continuation Passing Style
+## Continuation Passing Style
 
-        AKA, callbacks, currying, etc.  I am trying to start using the error
-        first Node style, but keep forgetting. :>  I will do a big run through
-        of all the code and standarize it through-out all of my Meteor code.
+     AKA, callbacks, currying, etc.  I am trying to start using the error
+     first Node style, but keep forgetting. :>  I will do a big run through
+     of all the code and standarize it through-out all of my Meteor code.
 
-        This is something you should consider if contributing or extending.
+     This is something you should consider if contributing or extending.
 
+## Comments
 
+     I use C style block comments.  Nicely formatted and with block frames
+     whose width infer their semantic value.  Kind of like H tags.
 
-    ## Comments
+     I use // for one & two line comments inside blocks or appended to a
+     line (rarely).
 
-        I use /real/ block comments.  Nicely formatted and with block frames
-        whose width infer their semantic value.  Kind of like H tags.
+     The re-write of my PHP CMS from PHP 4 to 5 taught me a few major
+     lessons, one being the value of clarity, code separation and comments.
+     Therefore, since then, even though I only code alone, I have done my
+     best to make my code clear, beautiful and thoroughly commented.
 
-        I use // for inline comments as they were designed for and you
-        will seldom find more than one line's worth.
+     I feel this is especially important in software I intend to release,
+     one should never make assumptions about others' abilities.  Not only
+     does roughing out code blocks with inline comments enable clarity of
+     thought, it should also prove valuable for those who are seeking
+     enlightenment or education.
 
-        The re-write of my PHP CMS from PHP 4 to 5 taught me a few major
-        lessons, one being the value of clarity, code separation and comments.
-        Therefore, since then, even though I only code alone, I have done my
-        best to make my code clear, beautiful and thoroughly commented.
+## File Structure
 
-        I feel this is especially important in software I intend to release,
-        one should never make assumptions about others' abilities.  Not only
-        does roughing out code blocks with inline comments enable clarity of
-        thought, it should also prove valuable for those who are seeking
-        enlightenment or education.
+     Secondly, I only write code in vim.  I prefer to consolidate
+     the primary code in as few files as possible because file
+     & directory management in vim is easy but not exactly point
+     & click.  Plus, under heavy alpha/beta development, adding & removing
+     files every couple hours or so can be a PIA.  I like writing code.
 
-    ## File Structure
+     I start with a lot of shuffling around & renaming, then settle into
+     a few major files and work out my betas there.  I then break the
+     project up appropriately for the release candidates and by 1.0.0
+     versions, things should be stable and non-core elements modulated.
 
-        Secondly, I only write code in vim.  I prefer to consolidate
-        the primary code in as few files as possible because file
-        & directory management in vim is easy but not exactly point
-        & click.  Plus, under heavy development, adding & removing
-        files to Git is a PIA.  I like writing code.
+     All plugins, extensions, etc.. that are not part of the main
+     code base should be contained in their own appropriately named
+     directory and then broken down into as many files & folders as
+     you like.
 
-        I start with a lot of shuffling around & renaming, then settle into
-        a few major files and work out my betas there.  I then break the
-        project up appropriately for the release candidates and by 1.0.0
-        versions, things should be stable and non-core elements modulated.
+## Vertical Space
+
+     I use vertical space liberally, but not excessivelly.  I've seen code
+     where if statements that evaulate several expressions are broken up
+     with multi-line comments and vertical white space between each
+     expression.. that is excessive.  I use it to generally keep everything
+     under 80 characters wide and break up things that make sense to operate
+     on in a per-line basis from a vim-coding stand point.  For example,
+     all object properties end w/commas, even the last one.  You never
+     know when you'll want to toss them in a :sort or add one to the end,
+     copy the last one up higher and change it, etc..
+
+     And, of course, to add clarity to nested expressions and object
+     declarations.
+
+## White Space
 
-        All plugins, extensions, etc.. that are not part of the main
-        code base should be contained in their own appropriately named
-        directory and then broken down into as many files & folders as
-        you like.
+     I have recently ditched my beat up, 8 year old vim config and adopted
+     2 spaces instead of 4 for indentation.  Pardon the dust.
 
-    ## Vertical Space
+     I like pretty code and therefore like to line up my local  var = signs,
+     line appended commented, extra indent some ternaries,  etc.
 
-        I use vertical space liberally, but not excessivelly.  I've seen code
-        where if statements that evaulate several expressions are broken up
-        with multi-line comments and vertical white space between each
-        expression.. *that* is excessive.  I use it to generally keep everything
-        under 80 characters wide and break up things that make sense to operate
-        on in a per-line basis from a vim-coding stand point.  For example,
-        all object properties end w/commas, even the last one.  You never
-        know when you'll want to toss them in a :sort or add one to the end,
-        copy the last one up higher and change it, etc..
+     Pretty > consistency often wins here. It's white space after all.
+     Negative space is powerful, ask Hokusai or McKay.
 
-        And, of course, to add clarity to nested expressions and object
-        declarations.
+## TODOs
 
-    ## White Space
+     TODO in a comment stands out superbly in my vim setup.  However,
+     @TODO does not.  Dig?  If you intend to contribute, look for and
+     solve those.  They should be low-hanging fruit for the most part.
 
-        I have recently ditched my beat up, 8 year old vim config and adopted
-        2 spaces instead of 4 for indentation.  Pardon the dust.
+     If you find something that needs to be fixed or enhanced and want
+     me to notice it (you should put it in Trello or Github really),
+     use // TODO: unless it's a block-level priority, in which case
+     put the * TODO: in the block comments, as I do.
 
-        I like pretty code and therefore like to line up my local  var = signs,
-        line appended commented, extra indent some ternaries,  etc.
+     Ultimately, I should be the only one adding these to code.  They
+     are notes to myself or anyone looking for cherry pie.  If you
+     are submitting code that you have add TODOs to, you probably should
+     not have submitted it yet.  Or you know me really well. :)
 
-        Pretty > consistency often wins here. It's white space after all.
-        Negative space is powerful, ask Hokusai or McKay.
+## One-Liners
 
-    ## TODOs
+     99.999% of statements that could be one-lined are still 3 lines w/
+     curly braces.. so I can add stuff quick w/o having to filter my way
+     into a long line, add curlies, new lines & /then/ add a quick log
+     statement.
 
-        TODO in a comment stands out superbly in my vim setup.  However,
-        @TODO does not.  Dig?  If you intend to contribute, look for and
-        solve those.  They should be low-hanging fruit for the most part.
+## ==, ===, !, !! && ||
 
-        If you find something that needs to be fixed or enhanced and want
-        me to notice it (you should put it in Trello), use // TODO: unless
-        it's a block-level priority, in which case put the * TODO: in
-        the block comments, as I do.
+     I know precisely the subtle differences.  I actually read the ECMA
+     262 2nd edition spec from beginning to end, and am working my way through
+     6th edition currently.
 
-    ## One-Liners
+     I wrote strict XHTML 1.1 for many years.  What I learned is that unless
+     you are doing serious mathematics or science, or are working on
+     something for the finanical or medical industry.. it's really not worth
+     the issues  it creates.  Regular ol' web sites should not fail in the
+     face of your  user because of a little type conversion issue, a missing
+     closing tag.
 
-        That is also a big part of the reason 99.999% of statements that
-        could be one-lined are still 3 lines w/ curly braces.. so I can
-        add stuff quick w/o having to filter my way into a long line, add
-        curlies, new lines & /then/ add a quick log statement.
+     However, I still have to fight the urge to go strict.
+     I'm a perfectionist.
 
-    ## ==, ===, !, !! && ||
+     With regards to using == vs ===, there are only two steps performed before
+     it does a type check (first step in ===) and they validate the operands.
+     Any performance lost by actually failing more quickly if your critical
+     operand is null or undefined (the two additional steps before type
+     checking in the non-strict variant) is peace of mind & reliability
+     gained by writing your expressions backwards anyway. Fail fast, I say.
 
-        I know precisely the subtle differences.  I actually read the ECMA
-        262 2nd edition spec from beginning to end, and am working my way through
-        6th edition currently.
+     That being said, I don't use !! crap because *that* is a performance
+     hit that is not worth it if you are just trying to test for truthiness.
+     Since any expressions surrounded by paranthesis are automatically
+     evaluated & converted to a boolean.  So why then get all bitwise on it,
+     performing more operations?
 
-        I wrote strict XHTML 1.1 for many years.  What I learned is that unless
-        you are doing serious mathematics or science, or are working on
-        something for the finanical or medical industry.. it's really not worth
-        the issues  it creates.  Regular ol' web sites should not fail in the
-        face of your  user because of a little type conversion issue, a missing
-        closing tag.
+     Indeed, in the interest of performance I use ! as little as possible
+     (more in OPW than upcoming MeteorPress due to my renewed sense of urgency)
+     since checking for true is faster than checking for negation. That's why
+     you'll see some validation functions as isValidX or isInvalidX both.
 
-        However, I still have to fight the urge to go strict.
-        I'm a perfectionist.
+     In PHP, and beginning Meteor, I always checked for precisely what I
+     expected in my expressions. For instance, ('undefined' == typeof(value))
+     rather than (!value).  However, in an effort to be more 'javascripty' or
+     'meteory' (and after I figured out what failure/empty returns from Mongo
+     & Meteor returned), I have forced myself to drop that extra verbosity.
+     I'm not sure that I like it yet, but.. it works, and it saves me keystrokes.
+     So, until I'm writing some crazy 3D space navigation... truthy/falsey
+     will do fine.
 
-        With regards to using == vs ===, there are only two steps performed before
-        it does a type check (first step in ===) and they validate the operands.
-        Any performance lost by actually failing more quickly if your critical
-        operand is null or undefined (the two additional steps before type
-        checking in the non-strict variant) is peace of mind & reliability
-        gained by writing your expressions backwards anyway. Fail fast, I say.
+     And, seriously.  If you're using ! or !! in your code... then using
+     ==== in every comparrison is really just a red herring.
 
-        That being said, I don't use !! crap because *that* is a performance
-        hit that is not worth it if you are just trying to test for truthiness.
-        Since any expressions surrounded by paranthesis are automatically
-        evaluated & converted to a boolean.  So why then get all bitwise on it,
-        performing more operations?
+     As for && and ||.  I like them to start new lines that way
+     it's easy to identify code that needs to be re-factored. :)
 
-        Indeed, in the interest of performance I use ! as little as possible
-        (more in OPW than upcoming MeteorPress) since checking for true
-        is faster than checking for negation. That's why you'll see some
-        validation functions as isValidX or isInvalidX both.
+     They can be inline if they fit and it's cleaner / makes sense /
+     is prettier.
 
-        In PHP, and beginning Meteror, I always checked for precisely what I
-        expected in my expressions. For instance, ('undefined' == typeof(value))
-        rather than (!value).  However, in an effort to be more 'javascripty' or
-        'meteory', I have forced myself to drop that extra verbosity.  I'm not
-        sure that I like it yet, but.. it works, and it saves me keystrokes.
-        So, until I'm writing some crazy 3D space navigation... truthy/falsey
-        will do fine.
+     If you want to do smart things with them, like say to curry your
+     return value, like so:
 
-        And, seriously.  If you're using ! or !! in your code... then using
-        ==== is really just a red herring.
+     return ('function' == typeof(fX)) && fX(retVal)
+     or
+     return criticalResult || throw new Meteor.Error
 
-        As for && and ||.  I like them to start new lines that way
-        it's easy to identify code that needs to be re-factored. :)
+     That's cool with me, I'm trying to adopt that as a policy.  Aside from the
+     fact that you probably didn't need to hard crash there... See the error
+     handling section.
 
-        They can be inline if they fit and it's cleaner / makes sense /
-        is prettier.
+## Ternaries
 
-        If you want to do smart things with them, like say to curry your
-        return value, like so:
+     Hated them in PHP, abusing them in JS.
 
-            return ('function' == typeof(fX)) && fX(retVal)
-            or
-            return criticalResult || throw new Meteor.Error
+     Do whatever you want, little trixster.  Just make them pretty when
+     you do.  And seriously, don't use the expressions as functions.
 
-        That's cool with me.  Aside from the fact that you probably didn't
-        need to hard crash there... See the error handling section.
+     Re-factor.
 
-    ## Ternaries
+     Again, arguing over performance would be petty.  I've done the research.
+     If they were slow, every minifier in the world wouldn't use them, eh?
 
-        Hated them in PHP, abusing them in JS.
+     Until I program that spaceship...
 
-        Do whatever you want, little trixster.  Just make them pretty when
-        you do.  And seriously, don't use the expressions as functions.
+## Error Handling
 
-        Re-factor.
+     I prefer handling errors rather than failing, unless it is critical.
+     Also, I am still working out in my head what I feel will be the most
+     elegant solution that I wish to carry as a standardized methodology
+     thoroughout my Meteor projects.  I expect to see it appearing in the
+     code pretty soon though. :)
 
-        Again, arguing over performance would be petty.  I've done the research.
-        If they were slow, every minifier in the world wouldn't use them, eh?
+## Git / Github
 
-        Until I program that spaceship...
+     I haven't used them in a couple years.  I am completely dependent on
+     Vim's persistent undo and session manager.
 
-    ## Error Handling
+     However, from this point forward I will (attempt to) strictly follow
+     the git-flow model.
 
-        I prefer /handling/ errors rather than failing, unless it is critical.
-        Also, I am still working out in my head what I feel will be the most
-        elegant solution that I wish to carry as a standardized methodology
-        thoroughout my Meteor projects.  I expect to see it appearing in the
-        code pretty soon though. :)
 
-    ## Git / Github
+## Schemas, Autoforms, Roles, and etc.
 
-        I haven't used them in a couple years.  I am completely dependent on
-        Vim's persistent undo and session manager.
+     A huge time consumer in #MeteorPress is making the admin area w/o
+     relying on autoforms.  Betas 1 & 2 were fully functional, but relied
+     on autoforms completely.
 
-        However, from this point forward I will strictly follow the git-flow
-        model.
+     I had been toying with writing my own schema/collection2/autoform
+     type of thing to replace them.  I hate relying so much on a collection
+     of packages by different authors all tied together, it makes me feel
+     like my code will be more likely to break (ie; Iron Router 5 upgrade
+         breakages took my friend out of Meteor development for 6 months).
 
+     However, I recently found a more consolidated one that I may use.
 
-    ## Schemas, Autoforms, Roles, and etc.
+     Allan Lanning's Roles package is good, but #MeteorPress needs more.
+     So that is another huge time consumer, I spent 10 straight days writing
+     that system.  But, it will only take me a couple hours to integrate
+     into #OnePageWonder eventually.
 
-        A huge time consumer in #MeteorPress is making the admin area w/o
-        relying on autoforms.  Betas 1 & 2 were fully functional, but relied
-        on autoforms completely.
+     So, the packages may be hanging around..but do not rely on anything
+     but the most standard and awesome packages, like accounts-* forever
+     over a 3rd party set, iron-router, anything by @arunoda, etc..
 
-        I had been toying with writing my own schema/collection2/autoform
-        type of thing to replace them.  I hate relying so much on a collection
-        of packages by different authors all tied together, it makes me feel
-        like my code will be more likely to break (ie; Iron Router 5 upgrade
-        breakages took my friend out of Meteor development for 6 months).
+## Animations, rollovers, event feedback
 
-        However, I recently found a more consolidated one that I may use.
+     Current mindset is "do they work?" and until the major code tasks
+     are complete, will be fairly lack-luster.  That's your job!
 
-        Roles is good, but #MeteorPress needs more.  So that is another huge
-        time consumer, I spent 10 straight days writing that system.
+     However, after I get MP & OPW both 1.0.0'd, GSAP & SVG mastering
+     is top on my priority list!
 
-        So, the packages may be hanging around..but do not rely on anything
-        but the most standard and awesome packages, like accounts-* forever
-        over a 3rd party set, iron-router, anything by @arunoda, etc..
+## UI Frameworks
 
-    ## Animations, rollovers, event feedback
+     I've been focused on perfecting the presentation and customization
+     of Bootstrap for both MP & OPW.  Their goal is to provide industry
+     standard awesomeness, not the latest in soon to be failed CSS
+     micro-frameworks.
 
-        Current mindset is "do they work?" and until the major code tasks
-        are complete, will be fairly lack-luster.  That's your job!
+     When it comes to design, once upon a time I did amazing interfaces
+     all day & night.  However, I am a programmer first.  So until the
+     program is done, aesthetics are a bonus (wanna chip in? :D).
 
-        However, after I get MP & OPW both 1.0.0'd, GSAP & SVG mastering
-        is top on my priority list!
+     That being said, I intend to provide configuration toggles that
+     will automatically change MP or OPW to other frameworks I believe
+     in (Materialize, Polymer, React).
 
-    ## UI Frameworks
+     *BUT* I am still brainstorming how to most elegantly do this as
+     well as dynamic themes/colors.  Dynamic, user-selectable themes
+     are the very first feature of the very first CMS I ever wrote
+     (circa 1999-2000) and primary feature of every one after.
 
-        I've been focused on perfecting the presentation and customization
-        of Bootstrap for both MP & OPW.  Their goal is to provide industry
-        standard awesomeness, not the latest in soon to be failed CSS
-        micro-frameworks.
+     However, Meteor's file loading, template system and deep magic
+     make this quite a bit more complex than it was in PHP.
 
-        When it comes to design, once upon a time I did amazing interfaces
-        all day & night.  However, I am a programmer first.  So until the
-        program is done, aesthetics are a bonus (wanna chip in? :D).
+     Eventually.
 
-        That being said, I intend to provide configuration toggles that
-        will automatically change MP or OPW to other frameworks I believe
-        in (Materialize, Polymer, React).
 
-        *BUT* I am still brainstorming how to most elegantly do this as
-        well as dynamic themes/colors.  Dynamic, user-selectable themes
-        are the very first feature of the very first CMS I ever wrote
-        (circa 1999-2000) and primary feature of every one after.
+## Linting
 
-        However, Meteor's file loading, template system and deep magic
-        make this quite a bit more complex than it was in PHP.
+### Bootstrap
+     Doing it.
 
-        Eventually.
+### CSS
+     Working on it.
 
+### HTML
+     Pfffft.
 
-    ## Linting
+### JSCS
+     Yep.
 
-        ### Bootstrap
-        Doing it.
+### ESLint
+     Yep.
 
-        ### CSS
-        Working on it.
+### Meteor
+     Integrated.
 
-        ### HTML
-        Pfffft.
+     ~~Working on tuning the linters just right in the following priorities:
+     MDG Actual packages code of most critical packages
+     MDG Actual working & provided examples code
+     MDG Style guide
+     Node rules
+     My preferences~~
 
-        ### JSCS
-        Yep.
 
-        ### ESLint
-        Yep.
+### Strict Mode
+     Is for machines.
 
-        ### Meteor
-        Working on tuning the linters just right in the following priorities:
-            MDG Actual packages code of most critical packages
-            MDG Actual working & provided examples code
-            MDG Style guide
-            Node rules
-            My preferences
 
 
-        ### Strict Mode
-        Is for machines.
+## JSDocs
 
+I use a couple non-standard tags (I plan to patch it to support them)
+that are Meteor-specific.
 
 
-    ## JSDocs
+@Blocking
 
-    I use a couple non-standard tags (I plan to patch it to support them)
-    that are Meteor-specific.
+This is not standard in JSDoc (which I'm still learning
+    to use properly, and considering switching to YUI :>),
+but will be used in all appropriate methods.
+I find it a rather important thing to know about
+one's method calls, particularly in Meteor.
 
+By default, one should be able to rely on any blocking
+methods to require a callback function as their last
+parameter.  They will either receive true/false
+based upon success, or the standard Node/Meteor
+(error, result) parameters, where error should be
+a string and result can be of any type it wants to be.
 
-    @Blocking
+@Location
 
-         This is not standard in JSDoc (which I'm still learning
-         to use properly, and considering switching to YUI :>),
-         but will be used in all appropriate methods.
-         I find it a rather important thing to know about
-         one's method calls, particularly in Meteor.
+Client, Server or both (explicitly, not the word both)
 
-         By default, one should be able to rely on any blocking
-         methods to require a callback function as their last
-         parameter.  They will either receive true/false
-         based upon success, or the standard Node/Meteor
-         (error, result) parameters, where error should be
-         a string and result can be of any type it wants to be.
 
-    @Location
+## For Contributors
 
-         Client, Server or both (exlicitly, not the word both)
 
+### MP & OPW Plugins/Extensions
 
-  ## For Contributors
+  Much more complex to do in Meteor to do what I wish to do than it
+  was in PHP.  I'm working it out in my head very well before I attempt
+  it in practice. Honestly, I have plenty of other base functionality to
+  work on still.
 
+  Eventually, I will build them both point/click/search/browse repos
+  for themes & extensions, like every other softwarez in the world. :)
 
-    ### MP & OPW Plugins/Extensions
 
-        Here again, much more complex in Meteor to do what I want to do.  I'm
-        working it out in my head very well before I attempt it in practice.
-        Honestly, I have plenty of other base functionality to work on still.
+### DOs
 
-        Eventually, I will build them both point/click/search/browse repos
-        for themes & extensions, like every other softwarez in the world. :)
+  * DO do whatever you want in your separate, modularized & distinct
+  plugin or theme code. :D
+  That being said, I will hold curated plugins and themes hosted
+  on official repos & subdomains must be pretty close to these
+  or judged to be of high quality by myself or the community
+  * Do feel free to make sexy ternary magic, but try to
+  figure out and follow my patterns
+  * Do hoist your variables as far to the top as logical,
+  I don't mind if they come immediately after validation
+  or have complexity within them, just don't bury them somewhere
+  within a nested code block (unless they are local to a
+      callback function of course) or off screen of the function
+  declaration.. and please align their assignment operators
+* Do name your anonymous functions & callbacks.. even if I am not (see @exceptions)
+  * Do make frequent and proper use of the logging functions
+  provided by the APIs, they will get better
+  ... there's other logging stuff I'll detail later
+  * Do make friends with vertical space.. but not excessively..
+  a good policy is to know that moving lines around is
+  a lot easier than going through long lines, so break
+  around concatenations, commas, and operators
+  * Do make notes about your ideas along the way!
+  * Do name all callback return values 'result'
+  * Do name object parameters coming in from clients 'submission' to
+  clearly mark it as needing careful validation
+  * Do please test your code locally using meteor shell & logs
+  I will not accept code that throws nasty messages, junk,
+  is crashy, does not handle improperly formed requests,
+  clashes with MP naming conventions or if I feel that they
+  are generic and therefore probably not very well thought
+  out and probably going to cause others problems.
+  * Do put code with code and comments with comments
+  * Do talk with me if you intend to submit pull requests with
+  any kind of major structural changes, there is a lot
+  going on in my head still. |D
+  * Do use ECMA/Javasripty/Meteorish naming conventions
+  * Do use a non-clashing yet consistent naming pattern
+  * Do use if (Meteor.isClient) return; to start any methods which should
+  never be accessible from the front.. although these methods are
+  ultimately meant to be global utilities, so I have not found cause
+  to do so yet.
+  * Do use proper camel case upInHurr
+  * Do use 2 spaces for indenting
+  * Do validate in every method! (See @Exceptions if you spot one :p)
 
 
-    ### DOs
+### DON'Ts
 
-         * DO do whatever you want in your separate, modularized & distinct
-             plugin or theme code. :D
-             That being said, I will hold curated plugins and themes hosted
-              on official repos & subdomains must be pretty close to these
-              or judged to be of high quality by myself or the community
-         * Do feel free to make sexy ternary magic, but try to
-             figure out and follow my patterns
-         * Do hoist your variables as far to the top as logical,
-             I don't mind if they come immediately after validation
-             or have complexity within them, just don't bury them somewhere
-             within a nested code block (unless they are local to a
-             callback function of course) or off screen of the function
-             declaration.. and please align their assignment operators
-         * Do name your anonymous functions & callbacks.. even if I am not (see @exceptions)
-         * Do make frequent and proper use of the logging functions
-             provided by the APIs, they will get better
-             ... there's other logging stuff I'll detail later
-         * Do make friends with vertical space.. but not excessively..
-             a good policy is to know that moving lines around is
-             a lot easier than going through long lines, so break
-             around concatenations, commas, and operators
-         * Do make notes about your ideas along the way!
-         * Do name all callback return values 'result'
-         * Do name object parameters coming in from clients 'submission' to
-             clearly mark it as needing careful validation
-         * Do please test your code locally using meteor shell & logs
-             I will not accept code that throws nasty messages, junk,
-             is crashy, does not handle improperly formed requests,
-             clashes with MP naming conventionor* I feel they
-             are generic and therefore probably not very well thought
-             out and probably going to cause others problems.
-         * Do put code with code and comments with comments
-         * Do talk with me if you intend to submit pull requests with
-             any kind of major structural changes, there is a lot
-             going on in my head still. |D
-         * Do use ecma/javasripty naming conventions, but also try to be Meteory :>
-         * Do use a non-clashing yet consistent naming pattern
-         * Do use if (Meteor.isClient) return; to start any methods which should
-             never be accessible from the front.. although these methods are
-             ultimately meant to be global utilities, so I have not found cause
-             to do so yet.
-         * Do use proper camel case upInHurr
-         * Do use 2 spaces for indenting
-         * Do validate in every method! (See @Exceptions if you spot one :p)
+  * Thou shalt not add packages of any kind to the base without a thorough
+  discussion.  The less, the better.
+  * Thou shalt not use @TODO, just use todo, todo: or // todo[:]
+  ... but in CAPS!  All caps todo highlights nicely for me,
+  and @TODO is removed from JSDocs and I prefer that they
+  be available for viewing there.
+  * Thou shalt not put excessive comments within code blocks, use a
+  comment block above it and make your code clean and readable.
+  * Thou shalt not throw errors unless something catastrophic happens, I hate that!
+  Instead, return false or undefined and handle it mangggggg.
 
 
-    ### DON'Ts
+### Exceptions
 
-         * Thou shalt not add packages of any kind to the base without a thorough
-             discussion.  The less, the better.
-         * Thou shalt not use @TODO, just use todo, todo: or // todo[:]
-             ... but in CAPS!  All caps todo highlights nicely for me,
-             and @TODO is removed from JSDocs and I prefer that they
-             be available for viewing there.
-         * Thou shalt not put excessive comments within code blocks, use a
-             comment block above it and make yourcode* clean and readable.
-         * Thou shalt not throw errors unless something catastrophic happens, I hate that!
-             Instead, return false or undefined and handle it mangggggg.
+  I either make them or approve them, please and thank you. :)
 
 
-    ### Exceptions
+### My API Globals
 
-         I either make them or approve them, please and thank you. :)
-
-
-    ### My API Globals
-
-         aaXyyZyy vars are globals that are mostly going to evaporate
-         AA.xyyZyy are the APIs provided for hooking into from your add-ons.
-             Since they are global, it can be used in it's own methods'
-             callbacks, but don't use MP for storing state.  It will
-             be doomed to an implosion.. somwhere.. eventually.  Pass
-             around your state in a parameter named 'context'.
-         This clashes w/Meteor Style Guide..sorta.  But it is context specific
-         to my usage, and not part of Meteor core. :)
+  aaXyyZyy vars are globals that are mostly going to evaporate
+  AA.xyyZyy are the APIs provided for hooking into from your add-ons.
+  Since they are global, it can be used in it's own methods'
+  callbacks, but don't use MP for storing state.  It will
+  be doomed to an implosion.. somewhere.. eventually.  Pass
+  around your state in a parameter named 'context'.
+  This clashes w/Meteor Style Guide..sorta.  But it is context specific
+  to my usage, and not part of Meteor core. :)
 
