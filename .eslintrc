@@ -80,7 +80,7 @@
     "experimentalObjectRestSpread": true,
     "forOf": true,
     "generators": true,
-    "jsx": true
+    "jsx": true,
     "modules": true,
     "objectLiteralComputedProperties": true,
     "objectLiteralDuplicateProperties": false,
@@ -103,7 +103,6 @@
     "node": true,
     "phantomjs": true,
   },
-  "extends": "eslint:recommended",
 
   "rules": {
 
@@ -169,7 +168,7 @@
     "no-script-url": 2,     // No need for these in Meteor!
     "no-self-compare": 2,
     "no-sequences": 2,      // I hate that!
-    "no-shadow": [1, {"hoist": "functions}"]
+    "no-shadow": [1, {"hoist": "functions"}],
     "no-sparse-arrays": 2,
     "no-throw-literal": 2,  // Hopefully this lets Meteor.Error pass
     "no-unreachable": 2,
@@ -239,7 +238,7 @@
     "no-trailing-spaces": 2,
     "no-underscore-dangle": 0,
     "one-var": [2, "never"],
-    "padded-blocks": 0, "always"],
+    "padded-blocks": [0, "always"],
     "quotes": [
       2, "single", "avoid-escape"
     ],
