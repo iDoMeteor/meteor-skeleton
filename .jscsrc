@@ -41,10 +41,10 @@
     "requireCamelCaseOrUpperCaseIdentifiers": true,
     "requireCapitalizedComments": false,        // 4am comments are awesome
     "requireCapitalizedConstructors": true,
-    "requireCommaBeforeLineBreak: true,         // Please & thank you
+    "requireCommaBeforeLineBreak": true,         // Please & thank you
     "requireCurlyBraces": false,                // ESLint handles this much better
                                                 // and in MSG friendly way
-    "requireLineBreakAfterVariableAssignment: true,   // MSG & iDM style
+    "requireLineBreakAfterVariableAssignment": true,   // MSG & iDM style
     "requireMultipleVarDecl": true,             // MSG & iDM style
     "requireParenthesesAroundIIFE": true,       // iDM style, MSG no mention
     "requireSemicolons": true,                  // iDM & MSG
