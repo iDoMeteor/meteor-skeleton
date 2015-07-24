@@ -1,7 +1,11 @@
-*~
-*.swp
 *.swo
+*.swp
+*~
 ./.meteor/local
+./meteor/.finished-upgraders
+./meteor/.gitignore
+./meteor/.id
+./meteor/platforms
 ./packages
 ./private
 ./settings.json
