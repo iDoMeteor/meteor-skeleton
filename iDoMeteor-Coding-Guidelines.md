@@ -219,6 +219,11 @@ open minded and  flexible. :)
      checking in the non-strict variant) is peace of mind & reliability
      gained by writing your expressions backwards anyway. Fail fast, I say.
 
+     The practice dates back to a time when IE and FF would return different
+     types and many people didn't code very well.  In the context of Meteor,
+     such issues are moot since everything is ubiquitized by several frameworks
+     doing awesome things to take care of all those quirks.
+
      That being said, I don't use !! crap because *that* is a performance
      hit that is not worth it if you are just trying to test for truthiness.
      Since any expressions surrounded by paranthesis are automatically
@@ -240,7 +245,8 @@ open minded and  flexible. :)
      will do fine.
 
      And, seriously.  If you're using ! or !! in your code... then using
-     ==== in every comparrison is really just a red herring.
+     ==== in every comparrison is really just a red herring.  Use it where
+     it matters.
 
      As for && and ||.  I like them to start new lines that way
      it's easy to identify code that needs to be re-factored. :)
@@ -367,12 +373,13 @@ open minded and  flexible. :)
 ### Meteor
      Integrated.
 
-     ~~Working on tuning the linters just right in the following priorities:
-     MDG Actual packages code of most critical packages
-     MDG Actual working & provided examples code
-     MDG Style guide
-     Node rules
-     My preferences~~
+     ~~Working on tuning the linters just right in the following priorities:~~
+     ~~MDG Actual packages code of most critical packages~~
+     ~~MDG Actual working & provided examples code~~
+     ~~MDG Style guide~~
+     ~~Node rules~~
+     ~~My preferences~~
+     Eliminating irrelavent overkill in actual practice - in progress
 
 
 ### Strict Mode
