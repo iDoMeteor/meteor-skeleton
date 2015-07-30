@@ -1,15 +1,13 @@
 *.swo
 *.swp
 *~
-.meteor/local
 .meteor/.finished-upgraders
 .meteor/.gitignore
 .meteor/.id
-.meteor/platforms
+.meteor/local
 notes.txt
-packages/
+notes/
 private/
-meteorpress.json
 settings.json
 smart.lock
 todo.txt
