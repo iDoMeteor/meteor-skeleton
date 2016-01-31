@@ -1,7 +1,6 @@
 *.swo
 *.swp
 *~
-./*production*.json
 .meteor/.finished-upgraders
 .meteor/.gitignore
 .meteor/.id
@@ -10,5 +9,6 @@ notes.txt
 notes/
 private/
 settings.json
+settings-production.json
 smart.lock
 todo.txt
