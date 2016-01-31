@@ -1,6 +1,7 @@
 *.swo
 *.swp
 *~
+./*production*.json
 .meteor/.finished-upgraders
 .meteor/.gitignore
 .meteor/.id
