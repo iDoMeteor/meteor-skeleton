@@ -8,10 +8,6 @@ Herein lies mine.
 
 It includes the following:
 
-Superfluous:
-  * iDoMeteor-Coding-Guidelines.md - My personal (& opinionated) style guide for ECMA / Meteor development
-  * .jscs-meteor-research.md - Very esoteric data regarding my creation of the .jscsrc for Meteor, best viewed raw, my markdown sucks. :)
-
 Useful:
   * .csslint - For npm's csslint
   * .eslint - Based on node-style-guide & enhanced for Meteor compliance
@@ -26,8 +22,10 @@ Useful:
   * public - A place to show your assetts
   * settings.json - A place for settings, should your project require them
 
-There is a lot more information contained within the files themselves (the
-project files, not so much yet).
+Superfluous:
+  * iDoMeteor-Coding-Guidelines.md - My personal (& opinionated) style guide for ECMA / Meteor development
+
+I will flesh out the app files sooner or later with some useful code templates.
 
 Feel free to hit start up the issues or wiki, and I most certainly welcome
 commentary via @iDoMeteor on Twitter or on http://forums.meteor.com.
