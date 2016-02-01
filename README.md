@@ -28,6 +28,7 @@ I will flesh out the app files sooner or later with some useful code templates.
 
 # How to Use
 
+```
 git clone git@github.com:iDoMeteor/meteor-skeleton
 mv meteor-skeleton <your new app name>
 cd <your new app name>
@@ -36,6 +37,7 @@ git init
 git add -A .
 git commit -m "First commit, initialized repo"
 find app/ -type f -exec vim README.md {} +
+```
 
 Feel free to hit start up the issues or wiki, and I most certainly welcome
 commentary via @iDoMeteor on Twitter or on http://forums.meteor.com.
