@@ -8,7 +8,6 @@ Herein lies mine.
 
 It includes the following:
 
-Useful:
   * .csslint - For npm's csslint
   * .editorconfig - Set up some simple rules for compliant editors
   * .eslint - Based on node-style-guide & enhanced for Meteor compliance
@@ -26,6 +25,17 @@ Useful:
   * settings-production.json - A place for settings, should your project require them
 
 I will flesh out the app files sooner or later with some useful code templates.
+
+# How to Use
+
+git clone git@github.com:iDoMeteor/meteor-skeleton
+mv meteor-skeleton <your new app name>
+cd <your new app name>
+rm -rf .git
+git init
+git add -A .
+git commit -m "First commit, initialized repo"
+find app/ -type f -exec vim README.md {} +
 
 Feel free to hit start up the issues or wiki, and I most certainly welcome
 commentary via @iDoMeteor on Twitter or on http://forums.meteor.com.
