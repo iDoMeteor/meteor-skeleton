@@ -36,7 +36,7 @@ rm -rf .git
 git init
 git add -A .
 git commit -m "First commit, initialized repo"
-find app/ -type f -exec vim README.md {} +
+find app/ -type f -exec vim README.md settings* {} +
 ```
 
 Feel free to hit start up the issues or wiki, and I most certainly welcome
